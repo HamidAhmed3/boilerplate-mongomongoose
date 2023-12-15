@@ -41,7 +41,7 @@ const createManyPeople = (arrayOfPeople ,done) => {
       return console.log(err);
     }
     done(null , data);
-  }))
+  }));
   
 };
  
@@ -51,8 +51,7 @@ const findPeopleByName = ( done) => {
       return console.log(err);
     }
     done(null , data);
-  }))
-  console.log(data);
+  }));
 }; 
 
 const findOneByFood = (food, done) => {
