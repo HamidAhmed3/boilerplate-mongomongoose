@@ -22,13 +22,13 @@ const createAndSavePerson = (done) => {
     favoriteFoods: ["Pizza", "Burger"]
   });
 
-  person.save()
-  .then((data)=>{console.log(data)})
-  .catch((error)=>{console.log(error);});
-
-  done(null , data); 
-};
-
+  person.save((err,data)=>{
+    if(error){
+      return console.log(error);
+    }
+    done(null, data);
+  });
+}
 const createManyPeople = (arrayOfPeople, done) => {
   done(null /*, data*/);
 };
