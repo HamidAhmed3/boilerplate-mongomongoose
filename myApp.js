@@ -104,7 +104,7 @@ const removeById = (personId, done) => {
     if(err){
       return console.log(err);
     }
-    done(null , data);
+    done(null , updatedData);
   })
 };
 
